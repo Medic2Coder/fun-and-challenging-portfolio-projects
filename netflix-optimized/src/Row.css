@@ -1,0 +1,30 @@
+/** {*/
+/*    outline: 1px solid red;*/
+/*}*/
+
+.row_posters {
+    display: flex;
+/*    By putting display: flex; (flexbox) on parent container with
+... with just a few lines of code changed the columns of movies to rows*/
+    overflow-y:hidden;
+    overflow-x:scroll;
+    padding: 20px; /*so it doesn't crop the last poster*/
+}
+.row_posters::-webkit-scrollbar {
+    display: none; /*tells browswers keep the scrollbar but hide it*/
+}
+
+.row_poster {
+    object-fit: contain;
+    width: 100%;
+/*    This width at 100% keeps the aspect ration correct, max width and height now size it*/
+    max-height: 100px;
+    transition: transform 450ms;
+    /*    This is to make the size of picture change smoother   */
+    margin-right: 10px;
+}
+
+.row_poster:hover {
+    transform: scale(1.08);
+/*    this combined with transition makes a "silky smooth hover" */
+}
