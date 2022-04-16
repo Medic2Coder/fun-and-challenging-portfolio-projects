@@ -2,9 +2,11 @@ import React from 'react';
 
 function Banner() {
     return (
-        <div>
-
-        </div>
+        <header>      {/* <<<background image */}
+        {/*    title */}
+        {/*    div > 2 buttons */}
+        {/*    description */}
+        </header>
     )
 }
 
