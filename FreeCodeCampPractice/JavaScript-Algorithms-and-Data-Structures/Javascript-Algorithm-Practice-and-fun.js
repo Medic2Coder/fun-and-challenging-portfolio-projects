@@ -24,32 +24,62 @@
 //     7-9 - High
 //
 //     Note: You will need to have a case statement for each number in the range.
+//
+// function sequentialSizes(val) {
+//     let answer = "";
+//     // Only change code below this line
+//     switch (val) {  //val is passed into the function
+//         case 1:
+//         case 2:
+//         case 3:
+//             answer = "Low";
+//             break;
+//         case 4:
+//         case 5:
+//         case 6:
+//             answer =  "Mid";
+//             break;
+//         case 7:
+//         case 8:
+//         case 9:
+//             answer =  "High";
+//             break;
+//     }
+//     // Only change code above this line
+//     return answer;
+// }
+// sequentialSizes(1);
+// console.log(sequentialSizes(1));   //works
+// console.log(sequentialSizes(9));  //works
 
-function sequentialSizes(val) {
-    let answer = "";
-    // Only change code below this line
-    switch (val) {  //val is passed into the function
-        case 1:
-        case 2:
-        case 3:
-            answer = "Low";
-            break;
-        case 4:
-        case 5:
-        case 6:
-            answer =  "Mid";
-            break;
-        case 7:
-        case 8:
-        case 9:
-            answer =  "High";
-            break;
-    }
-    // Only change code above this line
-    return answer;
-}
-sequentialSizes(1);
-console.log(sequentialSizes(1));   //works
-console.log(sequentialSizes(9));  //works
+// ****************************************************************
+
+//Replacing If Else Chains with Switch
+//Example:
+//If you have many options to choose from, a switch statment can be easier to write than many chained if/else if statments:
+// if (val === 1) {
+//     answer = "a";
+// } else if (val === 2) {
+//     answer = "b";
+// } else {
+//     answer = "c";
+// }
+
+// can be replaced with:
+
+// switch(val) {
+//     case 1:
+//         answer = "a";
+//         break;
+//     case 2:
+//         answer = "b";
+//         break;
+//     default:
+//         answer = "c";
+// }
+
+//Problem:
+//TODO: For 17April2022
+
 
 
