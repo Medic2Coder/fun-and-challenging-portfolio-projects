@@ -28,3 +28,7 @@
     transform: scale(1.08);
 /*    this combined with transition makes a "silky smooth hover" */
 }
+
+.row_posterLarge {
+    max-height: 250px;
+}

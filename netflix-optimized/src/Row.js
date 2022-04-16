@@ -6,8 +6,8 @@ import"./Row.css";
 const imgBaseURL = "https://image.tmdb.org/t/p/w200";  //more manageable image size without size modifications or css
 const ogImgBaseURL = "https://image.tmdb.org/t/p/original";  //using this to apply css and custom sizing
 
-
-function Row({title, fetchUrl}) {
+                           //make sure to pull in prop isLargeRow to get large poster size
+function Row({title, fetchUrl, isLargeRow}) {
     const [movies, setMovies] = useState([]); //starts as empty movie array
     // so now we need a snippet of code which runs based on a specific condition or variable
     //       a really handy hook from react is called useEffect
@@ -25,13 +25,13 @@ function Row({title, fetchUrl}) {
     return (
         <div className="row">
             <h2>{title}</h2>
+
             <div className="row_posters">
-                {/*{several row posters}*/}
                 {movies.map(movie => (
                     <img
-                        className="row_poster"
                         key={movie.id}     //key is a unique identifier for each movie and renders faster
-                        src={`${ogImgBaseURL}${movie.poster_path}`}  //string interpolation is a beautiful jS feature
+                        className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+                        src={`${ogImgBaseURL}${isLargeRow ? movie.poster_path :movie.backdrop_path}`}  //string interpolation is a beautiful jS feature
                         alt={movie.name}
                     />
                 ))}
