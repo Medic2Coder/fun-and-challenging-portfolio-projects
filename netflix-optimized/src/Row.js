@@ -21,7 +21,6 @@ function Row({title, fetchUrl, isLargeRow}) {
 
         fetchData();
     }, [fetchUrl]);          /* if we leave brackets blank, run once when the row loads,  and don't run it again*/
-    console.log(movies);
     return (
         <div className="row">
             <h2>{title}</h2>
