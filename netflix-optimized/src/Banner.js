@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from './axios';
 import requests from './requests';
+import './Banner.css';
 
 
 function Banner() {
@@ -24,6 +25,10 @@ function Banner() {
 
     // console.log(movie); //TODO: Remove this line on production
 
+    function truncate(str, n){
+        return str?.length > n ? str.substr(0, n - 1) + '...' : str;
+    }
+
 
     return (
         <header className="banner"
@@ -37,15 +42,21 @@ function Banner() {
         >
 
             <div className="banner_contents">
-                <h1>
-                    {movie?.title || movie?.name || movie?.original_name}   
+                <h1 className="banner_title">
+                    {movie?.title || movie?.name || movie?.original_name}
                 </h1>
-                
+                <div className="banner_buttons">
+                    <button className="banner_button">Play</button>
+                    <button className="banner_button">My List</button>
+                </div>
+                <h1 className="banner_description">
+                    {truncate(movie?.overview, 160)}
+                </h1>
             </div>
-
         </header>
     );
 }
+  //create a function to take care of truncating text
 // the || takes care of the edge cases where the movie is null
 // the ? for example on the  movie? is new to React and is called optional chaining
 export default Banner;

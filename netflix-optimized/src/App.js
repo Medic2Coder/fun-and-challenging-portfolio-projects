@@ -17,9 +17,9 @@ function App() {
             <Banner />
 
             {/* TODO: Build NAV*/}
-
-            <h1>Netflix 2.0 (Testing)</h1>
-            <h5>Powered by Caffeine</h5>
+            <Nav />
+            {/*<h1>Netflix 2.0 (Testing)</h1>*/}
+            {/*<h5>Powered by Caffeine</h5>*/}
             <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}/>
             <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
             <Row title="Top Rated" fetchUrl={requests.fetchTopRated}/>
