@@ -25,7 +25,7 @@ function Banner() {
 
     // console.log(movie); //TODO: Remove this line on production
 
-    function truncate(str, n){
+    function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + '...' : str;
     }
 
@@ -39,6 +39,7 @@ function Banner() {
                 )`,
                     backgroundPosition: 'center center',
                 }}
+
         >
 
             <div className="banner_contents">
@@ -53,13 +54,14 @@ function Banner() {
                     {truncate(movie?.overview, 150)}
                 </h1>
             </div>
-            <div className={'banner_fadeBottom'}/>
+
+            <div className="banner_fadeBottom"  ></div>
         </header>
 
     );
 }
 
-  //create a function to take care of truncating text
+//create a function to take care of truncating text
 // the || takes care of the edge cases where the movie is null
 // the ? for example on the  movie? is new to React and is called optional chaining
 export default Banner;
