@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+.App {
+  background-color: #111;
+}
+
 /*Keep below commented out*/
 /*.App {*/
 /*  text-align: center;*/

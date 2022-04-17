@@ -53,9 +53,12 @@ function Banner() {
                     {truncate(movie?.overview, 150)}
                 </h1>
             </div>
+            <div className={'banner_fadeBottom'}/>
         </header>
+
     );
 }
+
   //create a function to take care of truncating text
 // the || takes care of the edge cases where the movie is null
 // the ? for example on the  movie? is new to React and is called optional chaining
