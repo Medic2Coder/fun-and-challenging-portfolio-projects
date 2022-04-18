@@ -1,36 +1,57 @@
 package SourcePackages;
 
-import java.util.Scanner;
-
 
 public class PlayerInfo {
-    Scanner in = new Scanner(System.in);   //now import the scanner class
-
-    private int age;
+    // private variables declared
+    // these can only be accessed by
+    // public methods of class 
     private String playerName;
+    private int age;
 
-    //Getter and Setter methods
-    public int age(){
-        return age;
-    }
 
-    public String playerName(){
+    // get method for name to access
+    // private variable Name 
+    public String getPlayerName() {
         return playerName;
     }
 
-    public void setAge(int age){
-        this.age=age;
+    // set method for name to access
+    // private variable Name
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+    // get method for age to access
+    // private variable age
+
+    public int getAge() {
+        return age;
+    }
+    // set method for age to access
+    // private variable age
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public void setPlayerName   (String playerName){
-        this.playerName=playerName;
+    // default constructor
+    public PlayerInfo() {
+        this.playerName = "";
+        this.age = 0;
     }
 
-//    //Constructor
-//    public PlayerInfo(int age, String playerName){
-//        this.age=age;
-//        this.playerName=playerName;
-//    }
+    // parameterized constructor
+    public PlayerInfo(String playerName, int age) {
+        this.playerName = playerName;
+        this.age = age;
+    }
+
+
+    // method to display player info
+    public void displayPlayerInfo() {
+        System.out.println("Player Name: " + playerName);
+        System.out.println("Player Age: " + age);
+    }
+    
 }
 
 
