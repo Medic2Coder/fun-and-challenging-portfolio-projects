@@ -26,7 +26,7 @@ public class Main {
         boolean running = true; // game keeps running until condition is met to stop
         System.out.println("Welcome to the Dungeon!");
 
-        Game:
+        GAME:
         while (running) {
             System.out.println("----------------------------------------------------");
 
@@ -52,20 +52,41 @@ public class Main {
                 String input = in.nextLine(); //in is the scanner object  and it grabs the next
                 // line from the console
                 if (input.equals("1")) {
-                    enemyHealth -= attackDamage;
-                    System.out.println("\tYou attacked the " + enemy + " for " + attackDamage + " damage!\n");
+                    int damageDealt = rand.nextInt(attackDamage) + 1;
+//                    int damageDealt = rand.nextInt(attackDamage);
+                    int damageTaken = rand.nextInt(enemyAttackDamage) + 1;
+//                    int damageTaken = rand.nextInt(enemyAttackDamage);
+                    enemyHealth -= damageDealt;
+                    health -= damageTaken;
+                    System.out.println("\t> You dealt " + damageDealt + " damage to " + enemy +
+                            "\n");
+                    System.out.println("\t> You took " + damageTaken + " damage from " + enemy +
+                            "\n");
+                    if (health <= 1) {
+                        System.out.println("\t> You have taken too much damage!\n");
+                        break;
+                    }
                 } else if (input.equals("2")) {
+                    if (numHealthPots > 0) {
+                        health += healthPotionHealAmount;
+                        numHealthPots--; //decrement the number of health potions
+                        //add feedaback for player
+                        System.out.println("\t> You drank a health potion, healing yourself for " + healthPotionHealAmount + " HP\n\t> You now have + " + numHealthPots + " health potions left\n");
+                    } else {
+                        System.out.println("\t> You have no health potions! Defeat enemeies for a" +
+                                " chance to get one!\n");
+                    }
 
-                }  else if (input.equals("3")) {
-
-                }  else {
-
+                } else if (input.equals("3")) {
+                    System.out.println("\t> You ran away from " + enemy + "!\n");
+                    continue GAME; //continue the game loop
+                } else {
+                    System.out.println("\t> Invalid input!\n");
                 }
             }
 
-            
-
         }
-
     }
 }
+
+
