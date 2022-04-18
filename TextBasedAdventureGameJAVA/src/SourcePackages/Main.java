@@ -16,8 +16,8 @@ public class Main {
         int enemyAttackDamage = 25;
 
         //Player Variables
-        int health = 100;            // our player's health
-        int attackDamage = 50;         // our player's attack damage
+        int health = 100;               // our player's health
+        int attackDamage = 50;          // our player's attack damage
         int numHealthPots = 3;          // our player's number of health potions
         int healthPotionHealAmount = 30;
         int healthPotionDropChance = 50; //chance of health potion dropping from enemy
