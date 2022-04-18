@@ -84,8 +84,50 @@ public class Main {
                     System.out.println("\t> Invalid input!\n");
                 }
             }
+            if (health <= 1) {
+                System.out.println("\t> You have taken too much damage and you limp out of the " +
+                        "dungeon, weak from battle.\n");
+                break;
+            }
+            //system out line
+            System.out.println(
+                    "--------------------------------------------------------------------------------");
+            System.out.println(" # " + enemy + " has been defeated! #\n");
+            System.out.println(
+                    "--------------------------------------------------------------------------------");
+            System.out.println(" # You have " + health + " HP left #\n");
+            if (rand.nextInt(100) < healthPotionDropChance) {
+                numHealthPots++; //increment the number of health potions
+                System.out.println(" # You have found a health potion from defeated " + enemy +
+                        "!"); //add feedback for player
+                System.out.println(" # You now have + " + numHealthPots + " health potion(s) left #\n");
 
+            }
+            System.out.println(
+                    "--------------------------------------------------------------------------------");
+            System.out.println("What would you like to do now?\n");
+            System.out.println("1. Continue fighting");
+            System.out.println("2. Exit dungeon");
+
+            String input = in.nextLine();
+            while (input.startsWith("1") || input.startsWith("2")) {
+                if (input.equals("1")) {
+                    System.out.println("\t> You continue to fight your adventure + \n");
+                    continue GAME; //continue the game loop
+                } else if (input.equals("2")) {
+                    System.out.println("\t> You have exited the dungeon!\n");
+                    break GAME; //break the game loop
+                } else {
+                    System.out.println("\t> Invalid input!\n");
+                }
+            }
         }
+        System.out.println("############################################################################");
+
+        System.out.println("# THANKS FOR PLAYING! #");
+        
+        System.out.println("############################################################################");
+        
     }
 }
 
