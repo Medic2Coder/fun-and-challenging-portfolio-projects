@@ -143,24 +143,27 @@
 //     return a === b;
 // }
 // Fix the function isLess to remove the if/else statements.
-
-// TODO: Problem:
-    function isLess(a, b) {
-        // Only change code below this line
-        // if (a < b) {
-        //     return true;
-        // } else {
-        //     return false;
-        // }
-
-        // function isLess(a,b) {
-            return a < b;             //no need to explicitly ask for return true or false when all comparison operators already to that
-        // }
-        // Only change code above this line
-    }
 //
-    isLess(10, 15);
-    console.log(isLess(15, 10));
+// // Problem:
+//     function isLess(a, b) {
+//         // Only change code below this line
+//         // if (a < b) {
+//         //     return true;
+//         // } else {
+//         //     return false;
+//         // }
+//
+//         // function isLess(a,b) {
+//             return a < b;             //no need to explicitly ask for return true or false when all comparison operators already to that
+//         // }
+//         // Only change code above this line
+//     }
+// //
+//     isLess(10, 15);
+//     console.log(isLess(15, 10));
+
+// ****************************************************************
+//TODO for April 19 2022
 
 
 
