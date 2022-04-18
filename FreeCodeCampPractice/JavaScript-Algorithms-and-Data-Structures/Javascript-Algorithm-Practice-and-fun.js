@@ -79,8 +79,8 @@
 // }
 
 //Problem:
-function chainToSwitch(val) {
-    let answer = "";
+// function chainToSwitch(val) {
+//     let answer = "";
     // Only change code below this line
     //old if else statement:
 
@@ -145,17 +145,22 @@ function chainToSwitch(val) {
 // Fix the function isLess to remove the if/else statements.
 
 // TODO: Problem:
-//     function isLess(a, b) {
-//         // Only change code below this line
-//         if (a < b) {
-//             return true;
-//         } else {
-//             return false;
-//         }
-//         // Only change code above this line
-//     }
+    function isLess(a, b) {
+        // Only change code below this line
+        // if (a < b) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+
+        // function isLess(a,b) {
+            return a < b;             //no need to explicitly ask for return true or false when all comparison operators already to that
+        // }
+        // Only change code above this line
+    }
 //
-//     isLess(10, 15);
+    isLess(10, 15);
+    console.log(isLess(15, 10));
 
 
 
