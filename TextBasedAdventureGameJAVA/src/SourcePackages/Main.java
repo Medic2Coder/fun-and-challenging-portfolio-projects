@@ -34,7 +34,35 @@ public class Main {
             // enemy health
             String enemy = enemies[rand.nextInt(enemies.length)]; //random  generator for enemy
             // from array from 0 to max length of array
-            System.out.println("\t# " + enemy + "appeared!");    //tab symbol
+            System.out.println("\t# " + enemy + "appeared! #\n");    //tab symbol and the n makes
+            // sure it moves on to the next line
+
+//            TODO: Create another while loop to keep the game running until the player dies or
+//             enemy dies since player is now in combat after the enemy appears
+
+//            while (enemyHealth > 0 && health > 0) {
+            while (enemyHealth > 0) {
+                System.out.println("\tYour HP: " + health + "\n");
+                System.out.println("\t" + enemy + "'s HP: " + enemyHealth + "\n");
+                System.out.println("\tWhat would you like to do?\n");
+                System.out.println("\t1. Attack");
+                System.out.println("\t2. Drink Health Potion");
+                System.out.println("\t3. Run Away!!!\n");
+
+                String input = in.nextLine(); //in is the scanner object  and it grabs the next
+                // line from the console
+                if (input.equals("1")) {
+                    enemyHealth -= attackDamage;
+                    System.out.println("\tYou attacked the " + enemy + " for " + attackDamage + " damage!\n");
+                } else if (input.equals("2")) {
+
+                }  else if (input.equals("3")) {
+
+                }  else {
+
+                }
+            }
+
             
 
         }
