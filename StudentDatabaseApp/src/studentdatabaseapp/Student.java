@@ -41,7 +41,7 @@ public class Student {
             System.out.print("Enter course to enroll (Q to quit): ");
             Scanner in = new Scanner(System.in);
             String course = in.nextLine();
-            if (!course.equals(("Q"))){
+            if (!course.equals(("Q"))) {
                 courses = courses + "\n" + course;
                 tuitionBalance = tuitionBalance + costOfCourse;
             } else {
@@ -63,16 +63,25 @@ public class Student {
         return studentID;
     }
 
+    //View Balance
+    public void viewBalance() {
+        System.out.println("Your balance is: " + tuitionBalance);
+    }
+
+    //Pay tuition
+    public void payTuition(int payment) {
+        tuitionBalance = tuitionBalance - payment;
+        System.out.println("Thank you for your payment of $" + payment);
+//        System.out.println("Your new balance is: " + tuitionBalance);
+        viewBalance();
+    }
+
+//Show Status
+
+
 }
 
 
-//enroll in Courses
-
-//View Balance
-
-//Pay tuition
-
-//Show Status
 
 
 
