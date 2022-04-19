@@ -45,7 +45,6 @@ public class Student {
                 courses = courses + "\n" + course;
                 tuitionBalance = tuitionBalance + costOfCourse;
             } else {
-                System.out.println("BREAK!");
                 break;  //break out of the loop
             }
         } while (1 != 0);
@@ -69,7 +68,10 @@ public class Student {
     }
 
     //Pay tuition
-    public void payTuition(int payment) {
+    public void payTuition() {
+        System.out.println("Enter your payment: ");
+        Scanner in = new Scanner(System.in);
+        int payment = in.nextInt();
         tuitionBalance = tuitionBalance - payment;
         System.out.println("Thank you for your payment of $" + payment);
 //        System.out.println("Your new balance is: " + tuitionBalance);

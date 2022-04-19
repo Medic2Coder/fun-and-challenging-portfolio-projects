@@ -7,7 +7,7 @@ public class StudentDatabaseApp {
         Student  stu1 = new Student();
         //call the method
         stu1.enroll();
-        stu1.payTuition(500);
+        stu1.payTuition();
         //Ask how many students we want to add
 
 
