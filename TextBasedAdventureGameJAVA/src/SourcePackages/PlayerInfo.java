@@ -46,6 +46,7 @@ public class PlayerInfo {
     }
 
 
+
     // method to display player info
     public void displayPlayerInfo() {
         System.out.println("Player Name: " + playerName);

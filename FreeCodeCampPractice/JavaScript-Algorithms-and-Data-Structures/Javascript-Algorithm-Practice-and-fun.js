@@ -81,22 +81,22 @@
 //Problem:
 // function chainToSwitch(val) {
 //     let answer = "";
-    // Only change code below this line
-    //old if else statement:
+// Only change code below this line
+//old if else statement:
 
-    // if (val === "bob") {
-    //     answer = "Marley";
-    // } else if (val === 42) {
-    //     answer = "The Answer";
-    // } else if (val === 1) {
-    //     answer = "There is no #1";
-    // } else if (val === 99) {
-    //     answer = "Missed me by this much!";
-    // } else if (val === 7) {
-    //     answer = "Ate Nine";
-    // }
+// if (val === "bob") {
+//     answer = "Marley";
+// } else if (val === 42) {
+//     answer = "The Answer";
+// } else if (val === 1) {
+//     answer = "There is no #1";
+// } else if (val === 99) {
+//     answer = "Missed me by this much!";
+// } else if (val === 7) {
+//     answer = "Ate Nine";
+// }
 
-    //new switch statement:
+//new switch statement:
 //     switch (val) {
 //         case "bob":
 //             answer = "Marley";
@@ -163,7 +163,43 @@
 //     console.log(isLess(15, 10));
 
 // ****************************************************************
-//TODO for April 19 2022
+//April 19 2022
+
+// Return Early Pattern for Functions
+
+// When a return statement is reached, the execution of the current function stops and control returns to the calling location.
+//example:
+// function myFun() {
+//     console.log("Hello");
+//     return "World";
+//     console.log("byebye")
+// }
+// myFun()
+// console.log(myFun());
+
+//Problem:
+// Modify the function abTest so that if a or b are less than 0 the function will immediately exit with a value of undefined.
+
+// Hint
+// Remember that undefined is a keyword, not a string.
+// Setup
+function abTest(a, b) {
+    // Only change code below this line
+
+    if (a < 0  || b < 0 ) {
+        return undefined;
+    }
+
+    // Only change code above this line
+
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(-2, 2));
+console.log(abTest(2, 2));
+
+
+
 
 
 

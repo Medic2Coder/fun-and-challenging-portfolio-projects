@@ -3,6 +3,8 @@ package SourcePackages;
 import java.util.Random;
 import java.util.Scanner;
 
+
+//TODO: change name to more descriptive name
 public class Main {
     public static void main(String[] args) {
         //System Objects which is similar to how we create variables in java
@@ -26,6 +28,11 @@ public class Main {
         boolean running = true; // game keeps running until condition is met to stop
         System.out.println("Welcome to the Dungeon!");
 
+
+        // creating object of class PlayerInfo
+        PlayerInfo playerInfo = new PlayerInfo();
+
+
         GAME:
         while (running) {
             System.out.println("----------------------------------------------------");
@@ -36,6 +43,23 @@ public class Main {
             // from array from 0 to max length of array
             System.out.println("\t# " + enemy + "appeared! #\n");    //tab symbol and the n makes
             // sure it moves on to the next line
+//          //TODO: USE ENCAPSULATION HERE TO CHANGE AND HIDE DEFAULT PLAYER INFORMATION
+            //user input of player name
+            System.out.print("Enter your name: ");
+            String playerName = in.nextLine();
+            System.out.println("\n\tHello " + playerName + "!");
+            System.out.print("Enter your age:");
+            int playerAge = in.nextInt();
+            System.out.println("\n\tYou are " + playerAge + " years old.");
+
+            // calling method setPlayerName
+            playerInfo.setPlayerName(playerName);
+            // calling method setAge
+            playerInfo.setAge(playerAge);
+            // calling method displayPlayerInfo
+            playerInfo.displayPlayerInfo();
+
+            
 
 //            TODO: Create another while loop to keep the game running until the player dies or
 //             enemy dies since player is now in combat after the enemy appears
