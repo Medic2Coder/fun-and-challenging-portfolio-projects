@@ -7,14 +7,14 @@ public class Student {
     private String lastName;
     private int gradeYear;
     private String studentID;
-    private String courses;
-    private int tuitionBalance;
+    private String courses = "null";       //initialize courses to null
+    private int tuitionBalance = 0;        //initialize tuition balance to 0
     private static int costOfCourse = 600;
     //test private static int id and value of static
     //static means that the value is the same for all instances of that class, not the instance
     // of the object
     //id stays with the class
-    private static int id = 1001;   // so if we increment we can then add on to that value so
+    private static int id = 1001;          // so if we increment we can then add on to that value so
     // next id is 1002
 
 
@@ -32,7 +32,25 @@ public class Student {
         setStudentID();
         System.out.println(firstName + " " + lastName + " is in year " + gradeYear + " and has " +
                 "student " +
-                "ID of "+ studentID);
+                "ID of " + studentID);
+    }
+
+    public void enroll() {
+        //Get inside a loop, user hits Q when done enrolling
+        do {
+            System.out.print("Enter course to enroll (Q to quit): ");
+            Scanner in = new Scanner(System.in);
+            String course = in.nextLine();
+            if (!course.equals(("Q"))){
+                courses = courses + "\n" + course;
+                tuitionBalance = tuitionBalance + costOfCourse;
+            } else {
+                System.out.println("BREAK!");
+                break;  //break out of the loop
+            }
+        } while (1 != 0);
+        System.out.println("Enrolled In: " + courses);
+        System.out.println("Tuition Balance: " + tuitionBalance);
 
     }
 
@@ -44,10 +62,8 @@ public class Student {
         this.studentID = gradeYear + "" + id;
         return studentID;
     }
-    
+
 }
-
-
 
 
 //enroll in Courses
