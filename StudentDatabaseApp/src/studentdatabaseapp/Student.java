@@ -9,7 +9,14 @@ public class Student {
     private int studentID;
     private String courses;
     private int tuitionBalance;
-    private int costOfCourse = 600;
+    private static int costOfCourse = 600;
+    //test private static int id and value of static
+    //static means that the value is the same for all instances of that class, not the instance
+    // of the object
+    //id stays with the class
+    private static int id = 1001;   // so if we increment we can then add on to that value so
+    // next id is 1002
+    
 
     //Constructor: prompt user for student name and year
     public Student(){
