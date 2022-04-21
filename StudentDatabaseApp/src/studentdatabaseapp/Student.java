@@ -80,8 +80,10 @@ public class Student {
     }
     public String toString() {
         return "\n\tCurrent Student Info: \nName: " + firstName + " " + lastName + "\n" + "Grade:" +
-                " " + gradeYear + "\n" +
-                "Courses Enrolled: " + courses + "\n" + "Balance $: " + tuitionBalance;
+                " " + gradeYear + "\n" + "Student ID: " + studentID + "\n" +
+                "Courses Enrolled: " + courses + "\n" + "Balance $: " + tuitionBalance + "\n" +
+                "\tHappy" +
+                " Learning!";
     }
 }
 
