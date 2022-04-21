@@ -14,7 +14,7 @@ public class Student {
     //static means that the value is the same for all instances of that class, not the instance
     // of the object
     //id stays with the class
-    private static int id = 1001;          // so if we increment we can then add on to that value so
+    private static int id = 1001;    // so if we increment we can then add on to that value so
     // next id is 1002
 
 
@@ -78,9 +78,16 @@ public class Student {
         viewBalance();
     }
 
-//Show Status
+////Show Status
+//    public void showInfo() {
+////        return ("Name: " + firstName + " " + lastName + "\n" + "Grade: " + gradeYear + "\n" +
+////                "Your balance is: " + tuitionBalance + "\n" + "Your courses are: " + courses +
+////                "\n");
+//
+//    }
 
 
+    
 }
 
 
