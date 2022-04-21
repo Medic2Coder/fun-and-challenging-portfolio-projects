@@ -21,6 +21,7 @@ public class StudentDatabaseApp {
         int numOfStudents = in.nextInt();
         Student[] students = new Student[numOfStudents];
         //iterate through the array and add each student
+        //welcome to the world of arrays of objects
         for (int n = 0; n < numOfStudents; n++) {
             students[n] = new Student();
             //call the method
@@ -29,9 +30,15 @@ public class StudentDatabaseApp {
 //            System.out.println(students[n].toString());
 
         }
-        System.out.println(students[0].toString());
-        System.out.println(students[1].toString());
-        System.out.println(students[2].toString());
+        
+        for (int n = 0; n < numOfStudents; n++) {
+            System.out.println(students[n].toString());
+
+        }
+        //for testing purposes
+//        System.out.println(students[0].toString());
+//        System.out.println(students[1].toString());
+//        System.out.println(students[2].toString());
 
 
 
