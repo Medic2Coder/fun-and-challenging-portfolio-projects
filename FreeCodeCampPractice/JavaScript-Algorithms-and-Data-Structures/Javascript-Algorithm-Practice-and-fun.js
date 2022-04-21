@@ -288,12 +288,18 @@
 //     You can set these object properties to whatever values you want, as long as name is a string, legs and tails are numbers, and friends is an array.
 
 //Problem:
-const myDog = {
-    // Only change code below this line
-
-
-    // Only change code above this line
-};
+// const myDog = {
+//     // Only change code below this line
+//     "name": "Hairy",
+//     "legs": 4,
+//     "tails": 1,
+//     "friends": ["Human1", "Human2", "Human3", "Dog1", "Dog2"]
+//
+//
+//     // Only change code above this line
+// };
+//
+// console.log(myDog);
 
 
 
