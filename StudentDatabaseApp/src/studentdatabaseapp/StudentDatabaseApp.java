@@ -8,6 +8,7 @@ public class StudentDatabaseApp {
         //call the method
         stu1.enroll();
         stu1.payTuition();
+        System.out.println(stu1.toString());
         //Ask how many students we want to add
 
 

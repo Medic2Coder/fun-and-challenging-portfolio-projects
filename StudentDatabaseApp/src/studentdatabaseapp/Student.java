@@ -7,7 +7,7 @@ public class Student {
     private String lastName;
     private int gradeYear;
     private String studentID;
-    private String courses = "";       //initialize courses to null
+    private String courses = "";       //initialize courses to null with double quotes
     private int tuitionBalance = 0;        //initialize tuition balance to 0
     private static int costOfCourse = 600;
     //test private static int id and value of static
@@ -76,19 +76,18 @@ public class Student {
         System.out.println("Thank you for your payment of $" + payment);
 //        System.out.println("Your new balance is: " + tuitionBalance);
         viewBalance();
+
     }
-
-////Show Status
-//    public void showInfo() {
-////        return ("Name: " + firstName + " " + lastName + "\n" + "Grade: " + gradeYear + "\n" +
-////                "Your balance is: " + tuitionBalance + "\n" + "Your courses are: " + courses +
-////                "\n");
-//
-//    }
-
-
-    
+    public String toString() {
+        return "\n\tCurrent Student Info: \nName: " + firstName + " " + lastName + "\n" + "Grade:" +
+                " " + gradeYear + "\n" +
+                "Courses Enrolled: " + courses + "\n" + "Balance $: " + tuitionBalance;
+    }
 }
+
+
+
+
 
 
 
