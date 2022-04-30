@@ -2,23 +2,27 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 18px;
-
+    padding: 20px;
+    height: 28px;
+    z-index: 1; /* make sure it's above the other elements due to it being a header*/
     display:flex;
     justify-content: space-between;
-    
+}
+
+.nav__black {
+    background-color: #111;
 }
 
 .nav__logo {
     position: fixed;
     left: 18px;
-    width: 85px;
+    width: 80px;
     object-fit: contain;
 }
 
 .nav__avatar {
     position: fixed;
     right: 18px;
-    width: 40px;
+    width: 30px;
     object-fit: contain;
 }
