@@ -13,14 +13,13 @@ function App() {
     return (
 
         <div className="App">
-            {/*TODO: build Banner*/}
-            <Banner />
-
-            {/* TODO: Build NAV*/}
             <Nav />
-            {/*<h1>Netflix 2.0 (Testing)</h1>*/}
-            {/*<h5>Powered by Caffeine</h5>*/}
-            <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}/>
+            <Banner />
+            <Row
+                title="NETFLIX ORIGINALS"
+                fetchUrl={requests.fetchNetflixOriginals}
+                isLargeRow={true}
+            />
             <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
             <Row title="Top Rated" fetchUrl={requests.fetchTopRated}/>
             <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
