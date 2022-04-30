@@ -3,9 +3,8 @@ import './App.css';
 import Row from "./Row.js" ;
 import requests from './requests';
 import keys from './keys';
-import banner from './Banner.js';
-import Nav from './Nav.js';
 import Banner from "./Banner.js";
+import Nav from './Nav.js';
 
 
 
