@@ -123,7 +123,6 @@
 // console.log(chainToSwitch(7));
 
 // ****************************************************************
-//TODO for April 18 2022
 
 // Returning Boolean Values from Functions
 // You may recall from Comparison with the Equality Operator that all comparison operators return a boolean true or false value.
@@ -198,7 +197,6 @@
 // // console.log(abTest(-2, 2));
 // // console.log(abTest(2, 2));
 
-// TODO for April 20 2022
 
 // Counting Cards
 // In the casino game Blackjack, a player can gain an advantage over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called Card Counting.
@@ -522,7 +520,6 @@
 // console.log(myDog);
 //
 
-//TODO for 28April2022
 //
 // Using Objects for Lookups
 //     Objects can be thought of as a key/value storage, like a dictionary. If you have tabular data, you can use an object to lookup values rather than a switch statement or an if/else chain. This is most useful when you know that your input data is limited to a certain range.
@@ -577,7 +574,6 @@
 // phoneticLookup("charlie");
 // console.log(phoneticLookup("charlie"));
 
-//TODO for 29April2022
 
 // Testing Objects for Properties
 //     Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
@@ -608,7 +604,6 @@
 // }
 //
 
-// TODO for 30April2022
 
 // Manipulating Complex Objects
 // Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
@@ -646,49 +641,91 @@
 //     Add a new album to the myMusic array. Add artist and title strings, release_year number, and a formats array of strings.
 
 
-//   Problem:  TODO for 30April2022
-const myMusic = [ //array called myMusic
-    {
-        "artist": "Billy Joel",     //objects with key value pairs
-        "title": "Piano Man",
-        "release_year": 1973,
-        "formats": [
-            "CD",
-            "8T",
-            "LP"
-        ],
-        "gold": true
-    },
-    //Add record here
-    {        //second object in the array
-        "artist": "Celine Dion",
-        "title": "The Voice",
-        "release_year": 1994,
-        "formats": [ "CD", "LP" ],
-        "gold": true
-    },
-    {
-        "another_artist": "Billy Joel 2",     //objects with key value pairs
-        "another_title": "Piano Man",
-        "release_year_something": 1974,
-        "format": [
-            "CD",
-            "8T",
-            "LP"
-        ],
-        "golds": true
-    },
+// //Problem:
+// const myMusic = [ //array called myMusic
+//     {
+//         "artist": "Billy Joel",     //objects with key value pairs
+//         "title": "Piano Man",
+//         "release_year": 1973,
+//         "formats": [
+//             "CD",
+//             "8T",
+//             "LP"
+//         ],
+//         "gold": true
+//     },
+//     //Add record here
+//     {        //second object in the array
+//         "artist": "Celine Dion",
+//         "title": "The Voice",
+//         "release_year": 1994,
+//         "formats": [ "CD", "LP" ],
+//         "gold": true
+//     },
+//     {
+//         "another_artist": "Billy Joel 2",     //objects with key value pairs
+//         "another_title": "Piano Man",
+//         "release_year_something": 1974,
+//         "format": [
+//             "CD",
+//             "8T",
+//             "LP"
+//         ],
+//         "golds": true
+//     },
+//
+//     {     //fourth object in the array
+//         "another_artist": "Someone 2.0",
+//         "another_title": "Something 2.0 redefinied",
+//         "another_release_year": 2021,
+//         "another_formats": [ "Youtube", "Live", "NFT" ],
+//         "another_gold": true
+//
+//     },
+// ];
+// console.log(myMusic);
 
-    {     //fourth object in the array
-        "another_artist": "Someone 2.0",
-        "another_title": "Something 2.0 redefinied",
-        "another_release_year": 2021,
-        "another_formats": [ "Youtube", "Live", "NFT" ],
-        "another_gold": true
+//TODO for 01May2022:
+// Accessing Nested Objects
+// The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+//
+//     Here is a nested object:
+//
+//     const ourStorage = {
+//         "desk": {
+//             "drawer": "stapler"
+//         },
+//         "cabinet": {
+//             "top drawer": {
+//                 "folder1": "a file",
+//                 "folder2": "secrets"
+//             },
+//             "bottom drawer": "soda"
+//         }
+//     };
+//
+// ourStorage.cabinet["top drawer"].folder2;
+// ourStorage.desk.drawer;
+// ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourStorage.desk.drawer would be the string stapler.
+//
+//     Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
 
-    },
-];
-console.log(myMusic);
+
+// //Problem:
+const myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+
+const gloveBoxContents = undefined;
+
 
 
 
