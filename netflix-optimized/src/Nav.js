@@ -3,9 +3,8 @@ import "./Nav.css";
 
 
 function Nav() {
-    //add state
+    //add state then import useState and useEffect
     const [show, handleShow] = useState(false);
-
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
