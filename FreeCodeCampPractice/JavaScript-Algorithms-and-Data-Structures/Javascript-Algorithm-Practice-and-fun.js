@@ -647,9 +647,9 @@
 
 
 //   Problem:  TODO for 30April2022
-const myMusic = [
+const myMusic = [ //array called myMusic
     {
-        "artist": "Billy Joel",
+        "artist": "Billy Joel",     //objects with key value pairs
         "title": "Piano Man",
         "release_year": 1973,
         "formats": [
@@ -658,8 +658,42 @@ const myMusic = [
             "LP"
         ],
         "gold": true
-    }
+    },
+    //Add record here
+    {        //second object in the array
+        "artist": "Celine Dion",
+        "title": "The Voice",
+        "release_year": 1994,
+        "formats": [ "CD", "LP" ],
+        "gold": true
+    },
+    {
+        "another_artist": "Billy Joel 2",     //objects with key value pairs
+        "another_title": "Piano Man",
+        "release_year_something": 1974,
+        "format": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "golds": true
+    },
+
+    {     //fourth object in the array
+        "another_artist": "Someone 2.0",
+        "another_title": "Something 2.0 redefinied",
+        "another_release_year": 2021,
+        "another_formats": [ "Youtube", "Live", "NFT" ],
+        "another_gold": true
+
+    },
 ];
+console.log(myMusic);
+
+
+
+
+
 
 
 
