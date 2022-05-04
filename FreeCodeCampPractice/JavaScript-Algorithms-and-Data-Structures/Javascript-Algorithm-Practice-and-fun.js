@@ -820,10 +820,19 @@ const recordCollection = {
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
+    if (value === '') {
+        delete records[id][prop];
+    } else if (prop === 'tracks') {
+        records [id][prop] = records[id][prop] || [];  // check if the property exists, if not, create an empty array, then push the value to the array
+        records [id][prop].push(value);
+    } else {
+        records [id][prop] = value;
+    }
     return records;
 }
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+console.log(recordCollection);
 
 
 
