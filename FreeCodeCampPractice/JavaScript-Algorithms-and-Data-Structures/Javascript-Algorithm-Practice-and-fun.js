@@ -782,7 +782,6 @@
 // console.log(secondTree);
 
 
-//TODO for 03May2022:
 
 // Record Collection
 // You are given an object literal representing a part of your musical album collection. Each album has a unique id number as its key and several other properties. Not all albums have complete information.
@@ -798,41 +797,71 @@
 
 //Problem:
 // Setup
-const recordCollection = {
-    2548: {
-        albumTitle: 'Slippery When Wet',
-        artist: 'Bon Jovi',
-        tracks: ['Let It Rock', 'You Give Love a Bad Name']
-    },
-    2468: {
-        albumTitle: '1999',
-        artist: 'Prince',
-        tracks: ['1999', 'Little Red Corvette']
-    },
-    1245: {
-        artist: 'Robert Palmer',
-        tracks: []
-    },
-    5439: {
-        albumTitle: 'ABBA Gold'
-    }
-};
+// const recordCollection = {
+//     2548: {
+//         albumTitle: 'Slippery When Wet',
+//         artist: 'Bon Jovi',
+//         tracks: ['Let It Rock', 'You Give Love a Bad Name']
+//     },
+//     2468: {
+//         albumTitle: '1999',
+//         artist: 'Prince',
+//         tracks: ['1999', 'Little Red Corvette']
+//     },
+//     1245: {
+//         artist: 'Robert Palmer',
+//         tracks: []
+//     },
+//     5439: {
+//         albumTitle: 'ABBA Gold'
+//     }
+// };
+//
+// // Only change code below this line
+// function updateRecords(records, id, prop, value) {
+//     if (value === '') {
+//         delete records[id][prop];
+//     } else if (prop === 'tracks') {
+//         records [id][prop] = records[id][prop] || [];  // check if the property exists, if not, create an empty array, then push the value to the array
+//         records [id][prop].push(value);
+//     } else {
+//         records [id][prop] = value;
+//     }
+//     return records;
+// }
+//
+// updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+// console.log(recordCollection);
+
+//
+// Iterate with JavaScript While Loops
+// You can run the same code multiple times by using a loop.
+//
+//     The first type of loop we will learn is called a while loop because it runs while a specified condition is true and stops once that condition is no longer true.
+//
+//     const ourArray = [];
+// let i = 0;
+//
+// while (i < 5) {
+//     ourArray.push(i);
+//     i++;
+// }
+// In the code example above, the while loop will execute 5 times and append the numbers 0 through 4 to ourArray.
+//
+//     Let's try getting a while loop to work by pushing values to an array.
+//
+// Add the numbers 5 through 0 (inclusive) in descending order to myArray using a while loop.
+// PROBLEM:
+// Setup
+const myArray = [];
 
 // Only change code below this line
-function updateRecords(records, id, prop, value) {
-    if (value === '') {
-        delete records[id][prop];
-    } else if (prop === 'tracks') {
-        records [id][prop] = records[id][prop] || [];  // check if the property exists, if not, create an empty array, then push the value to the array
-        records [id][prop].push(value);
-    } else {
-        records [id][prop] = value;
-    }
-    return records;
+let i = 5;
+while (i >=0 ) {
+    myArray.push(i);
+    i--;
 }
-
-updateRecords(recordCollection, 5439, 'artist', 'ABBA');
-console.log(recordCollection);
+console.log(myArray);
 
 
 
