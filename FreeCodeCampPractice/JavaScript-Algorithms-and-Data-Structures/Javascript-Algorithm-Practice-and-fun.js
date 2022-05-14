@@ -1178,12 +1178,30 @@
 //
 //
     //Problem:
-    function randomFraction() {
-//     Change randomFraction to return a random number instead of returning 0
-        return Math.random();
-    }
+//     function randomFraction() {
+// //     Change randomFraction to return a random number instead of returning 0
+//         return Math.random();
+//     }
+//
+//     console.log(randomFraction());
 
-    console.log(randomFraction());
+//14May2022
+// Generate Random Whole Numbers with JavaScript
+//     It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+//
+//     Use Math.random() to generate a random decimal.
+//     Multiply that random decimal by 20.
+// Use another function, Math.floor() to round the number down to its nearest whole number between 0 and 9.
+
+    //Problem:
+function randomWholeNum() {
+
+    // Only change code below this line
+
+    return Math.floor(Math.random() *10);
+}
+
+console.log(randomWholeNum());
 
 
 
