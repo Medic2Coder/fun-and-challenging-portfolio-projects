@@ -1111,38 +1111,38 @@
 //
 //     If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
 //
-       //Problem:
+//Problem:
 // Setup
-const contacts = [
-    {
-        firstName: "Akira",
-        lastName: "Laine",
-        number: "0543236543",
-        likes: ["Pizza", "Coding", "Brownie Points"],
-    },
-    {
-        firstName: "Harry",
-        lastName: "Potter",
-        number: "0994372684",
-        likes: ["Hogwarts", "Magic", "Hagrid"],
-    },
-    {
-        firstName: "Sherlock",
-        lastName: "Holmes",
-        number: "0487345643",
-        likes: ["Intriguing Cases", "Violin"],
-    },
-    {
-        firstName: "Kristian",
-        lastName: "Vos",
-        number: "unknown",
-        likes: ["JavaScript", "Gaming", "Foxes"],
-    },
-];
-
-function lookUpProfile(name, prop) {
+// const contacts = [
+//     {
+//         firstName: "Akira",
+//         lastName: "Laine",
+//         number: "0543236543",
+//         likes: ["Pizza", "Coding", "Brownie Points"],
+//     },
+//     {
+//         firstName: "Harry",
+//         lastName: "Potter",
+//         number: "0994372684",
+//         likes: ["Hogwarts", "Magic", "Hagrid"],
+//     },
+//     {
+//         firstName: "Sherlock",
+//         lastName: "Holmes",
+//         number: "0487345643",
+//         likes: ["Intriguing Cases", "Violin"],
+//     },
+//     {
+//         firstName: "Kristian",
+//         lastName: "Vos",
+//         number: "unknown",
+//         likes: ["JavaScript", "Gaming", "Foxes"],
+//     },
+// ];
+//
+// function lookUpProfile(name, prop) {
     // Only change code below this line
-      //iterate through the contacts array
+    //iterate through the contacts array
     // for (let i = 0; i < contacts.length; i ++) {
     //     if(contacts[i].firstName === name) {
     //         if(contacts[i].hasOwnProperty(prop)) {
@@ -1153,17 +1153,42 @@ function lookUpProfile(name, prop) {
     //         }
     //     }
     // }
-    for (let i = 0; i < contacts.length; i ++) {
-        if(contacts[i].firstName === name) {
-            return contacts[i][prop] || "No such property";
-        }
-    }
-    return "No such contact";
-    // Only change code above this line
-}
+//     for (let i = 0; i < contacts.length; i ++) {
+//         if(contacts[i].firstName === name) {
+//             return contacts[i][prop] || "No such property";
+//         }
+//     }
+//     return "No such contact";
+//     // Only change code above this line
+// }
+//
+// lookUpProfile("Akira", "likes");
+// console.log(lookUpProfile("Akira", "likes"));
+//
 
-lookUpProfile("Akira", "likes");
-console.log(lookUpProfile("Akira", "likes"));
+//13May2022
+//     Generate Random Fractions with JavaScript
+//         Random numbers are useful for creating random behavior.
+//
+//         JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+//
+//     Note: Like Storing Values with the Assignment Operator, all function calls will be resolved before the return executes, so we can return the value of the Math.random() function.
+//
+//     Change randomFraction to return a random number instead of returning 0.
+//
+//
+    //Problem:
+    function randomFraction() {
+//     Change randomFraction to return a random number instead of returning 0
+        return Math.random();
+    }
+
+    console.log(randomFraction());
+
+
+
+
+
 
 
 
