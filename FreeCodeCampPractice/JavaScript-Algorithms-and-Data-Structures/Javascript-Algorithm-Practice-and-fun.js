@@ -1215,15 +1215,33 @@
 // Create a function called randomRange that takes a range myMin and myMax and returns a random whole number that's greater than or equal to myMin, and is less than or equal to myMax, inclusive.
 //
 //Problem:
-function randomRange(myMin, myMax) {
-    // Only change code below this line
-    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
-    
-    // Only change code above this line
+// function randomRange(myMin, myMax) {
+//     // Only change code below this line
+//     return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+//
+//     // Only change code above this line
+// }
+//
+// console.log(randomRange(5, 15));
+
+//16May2022
+// Use the parseInt Function
+// The parseInt() function parses a string and returns an integer. Here's an example:
+//
+// const a = parseInt("007");
+// The above function converts the string 007 to the integer 7. If the first character in the string can't be converted into a number, then it returns NaN.
+//
+// Use parseInt() in the convertToInteger function so it converts the input string str into an integer, and returns it.
+//
+//Problem:
+function convertToInteger
+(str) {
+    return parseInt(str);
 }
 
-console.log(randomRange(5, 15));
 
+convertToInteger("0056");
+console.log(convertToInteger("0056"));
 
 
 
