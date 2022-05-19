@@ -1141,18 +1141,18 @@
 // ];
 //
 // function lookUpProfile(name, prop) {
-    // Only change code below this line
-    //iterate through the contacts array
-    // for (let i = 0; i < contacts.length; i ++) {
-    //     if(contacts[i].firstName === name) {
-    //         if(contacts[i].hasOwnProperty(prop)) {
-    //             return contacts[i][prop];
-    //         } else {
-    //             return "No such property";
-    //
-    //         }
-    //     }
-    // }
+// Only change code below this line
+//iterate through the contacts array
+// for (let i = 0; i < contacts.length; i ++) {
+//     if(contacts[i].firstName === name) {
+//         if(contacts[i].hasOwnProperty(prop)) {
+//             return contacts[i][prop];
+//         } else {
+//             return "No such property";
+//
+//         }
+//     }
+// }
 //     for (let i = 0; i < contacts.length; i ++) {
 //         if(contacts[i].firstName === name) {
 //             return contacts[i][prop] || "No such property";
@@ -1177,7 +1177,7 @@
 //     Change randomFraction to return a random number instead of returning 0.
 //
 //
-    //Problem:
+//Problem:
 //     function randomFraction() {
 // //     Change randomFraction to return a random number instead of returning 0
 //         return Math.random();
@@ -1193,7 +1193,7 @@
 //     Multiply that random decimal by 20.
 // Use another function, Math.floor() to round the number down to its nearest whole number between 0 and 9.
 
-    //Problem:
+//Problem:
 // function randomWholeNum() {
 //
 //     // Only change code below this line
@@ -1257,7 +1257,7 @@
 //
 // Use parseInt() in the convertToInteger function so it converts a binary number to an integer and returns it.
 
-    //Problem:
+//Problem:
 //     function convertToInteger
 //     (str) {
 //         return parseInt(str, 2);
@@ -1287,13 +1287,50 @@
 //         return a > b ? "a is greater" : "b is greater or equal";
 //     }
 // Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either the string Equal or the string Not Equal.
-// Problem:
-function checkEqual(a, b) {
-                          return a === b ? "Equal" : "Not Equal";
+
+//19May2022
+//Use Multiple Conditional (Ternary) Operators
+// In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+//
+// The following function uses if, else if, and else statements to check multiple conditions:
+//
+// function findGreaterOrEqual(a, b) {
+//   if (a === b) {
+//     return "a and b are equal";
+//   }
+//   else if (a > b) {
+//     return "a is greater";
+//   }
+//   else {
+//     return "b is greater";
+//   }
+// }
+// The above function can be re-written using multiple conditional operators:
+//
+// function findGreaterOrEqual(a, b) {
+//   return (a === b) ? "a and b are equal"
+//     : (a > b) ? "a is greater"
+//     : "b is greater";
+// }
+// It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. Using multiple conditional operators without proper indentation may make your code hard to read. For example:
+//
+// function findGreaterOrEqual(a, b) {
+//   return (a === b) ? "a and b are equal" : (a > b) ? "a is greater" : "b is greater";
+// }
+// In the checkSign function, use multiple conditional operators - following the recommended format used in findGreaterOrEqual - to check if a number is positive, negative or zero. The function should return positive, negative or zero.
+//Problem:
+function checkSign(num) {
+    return (num > 0) ? "positive"
+        : (num < 0) ? "negative"
+            : "zero";
 }
 
-checkEqual(1, 2);
-console.log(checkEqual(1, 2));
+
+
+checkSign(10);
+console.log(checkSign(10));
+console.log(checkSign(-10));
+console.log(checkSign(0));
 
 
 
