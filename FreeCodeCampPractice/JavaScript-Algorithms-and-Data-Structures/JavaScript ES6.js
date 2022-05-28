@@ -297,24 +297,63 @@ console.log(magic());
 
 //     Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables today and tomorrow the values of today and tomorrow from the HIGH_TEMPERATURES object.
      //Problem:
-const HIGH_TEMPERATURES = {
-    yesterday: 75,
-    today: 77,
-    tomorrow: 80
+// const HIGH_TEMPERATURES = {
+//     yesterday: 75,
+//     today: 77,
+//     tomorrow: 80
+// };
+//
+// // Only change code below this line
+// //
+// // const today = HIGH_TEMPERATURES.today;
+// // const tomorrow = HIGH_TEMPERATURES.tomorrow;
+//
+// const {today: highToday, tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+//
+// // Only change code above this line
+//
+// console.log(highToday);
+// console.log(highTomorrow);
+//
+//28May2022
+// Use Destructuring Assignment to Assign Variables from Nested Objects
+// You can use the same principles from the previous two lessons to destructure values from nested objects.
+//
+//     Using an object similar to previous examples:
+//
+//     const user = {
+//         johnDoe: {
+//             age: 34,
+//             email: 'johnDoe@freeCodeCamp.com'
+//         }
+//     };
+// Here's how to extract the values of object properties and assign them to variables with the same name:
+//
+// const { johnDoe: { age, email }} = user;
+// And here's how you can assign an object properties' values to variables with different names:
+//
+//     const { johnDoe: { age: userAge, email: userEmail }} = user;
+// Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables lowToday and highToday the values of today.low and today.high from the LOCAL_FORECAST object.
+//
+//Problem:
+const LOCAL_FORECAST = {
+    yesterday: { low: 61, high: 75 },
+    today: { low: 64, high: 77 },
+    tomorrow: { low: 68, high: 80 }
 };
 
 // Only change code below this line
-//
-// const today = HIGH_TEMPERATURES.today;
-// const tomorrow = HIGH_TEMPERATURES.tomorrow;
 
-const {today, tomorrow} = HIGH_TEMPERATURES;
-console.log(today);
-console.log(tomorrow);
+// const lowToday = LOCAL_FORECAST.today.low;
+// const highToday = LOCAL_FORECAST.today.high;
+const {today: {low: lowToday, high: highToday}} = LOCAL_FORECAST;
+
+
+
 
 // Only change code above this line
-
-
+console.log(lowToday);
+console.log(highToday);
 
 
 
