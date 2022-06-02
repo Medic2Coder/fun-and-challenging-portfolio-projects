@@ -1,5 +1,9 @@
 /*Keep this margin spec*/
 /*Start with clean slate and no margins to get better view*/
+{
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 5000px;
+}
 * {
   margin: 0;
 }
