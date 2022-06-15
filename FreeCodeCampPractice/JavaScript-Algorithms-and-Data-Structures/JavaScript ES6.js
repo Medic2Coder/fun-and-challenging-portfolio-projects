@@ -817,20 +817,48 @@ console.log(magic());
 // The example above uses strings for the argument of these functions, but it can really be anything. Often, it might be an object, that you would use data from, to put on your website or elsewhere.
 //
 //     Make the promise handle success and failure. If responseFromServer is true, call the resolve method to successfully complete the promise. Pass resolve a string with the value We got the data. If responseFromServer is false, use the reject method instead and pass it the string: Data not received.
+//
+// const makeServerRequest = new Promise((resolve, reject) => {
+//     // responseFromServer represents a response from a server
+//     let responseFromServer;
+//
+//     if(responseFromServer) {
+//         resolve("We got the data");
+//     } else {
+// reject("Data not received");
+//     }
+// });
+//
+//
+// console.log(makeServerRequest);
 
+//14June2022
+// Handle a Fulfilled Promise with then
+//     Promises are most useful when you have a process that takes an unknown amount of time in your code (i.e. something asynchronous), often a server request. When you make a server request it takes some amount of time, and after it completes you usually want to do something with the response from the server. This can be achieved by using the then method. The then method is executed immediately after your promise is fulfilled with resolve. Here’s an example:
+//
+//     myPromise.then(result => {
+//
+//     });
+// result comes from the argument given to the resolve method.
+//
+//     Add the then method to your promise. Use result as the parameter of its callback function and log result to the console.
+//
+//
+//Problem:
 const makeServerRequest = new Promise((resolve, reject) => {
-    // responseFromServer represents a response from a server
-    let responseFromServer;
+    // responseFromServer is set to true to represent a successful response from a server
+    let responseFromServer = true;
 
     if(responseFromServer) {
         resolve("We got the data");
     } else {
-reject("Data not received");
+        reject("Data not received");
     }
 });
 
-
-console.log(makeServerRequest);
+makeServerRequest.then(result => {
+    console.log(result);
+})
 
 
 
