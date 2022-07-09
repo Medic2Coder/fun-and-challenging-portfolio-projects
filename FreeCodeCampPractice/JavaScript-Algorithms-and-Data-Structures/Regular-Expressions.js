@@ -301,39 +301,56 @@
 
 //Problem:
 //
-let text = "<h1>Winter is coming</h1>";
-let myRegex = /<.*?>/;
-let result = text.match(myRegex);
-console.log(result);
+// let text = "<h1>Winter is coming</h1>";
+// let myRegex = /<.*?>/;
+// let result = text.match(myRegex);
+// console.log(result);
 
-
+//08July2022
 //Find One or More Criminals in a Hunt
-Time to pause and test your new regex writing skills. A group of criminals escaped from jail and ran away, but you don't know how many. However, you do know that they stay close together when they are around other people. You are responsible for finding all of the criminals at once.
-
-Here's an example to review how to do this:
-
-The regex /z+/ matches the letter z when it appears one or more times in a row. It would find matches in all of the following strings:
-
-"z"
-"zzzzzz"
-"ABCzzzz"
-"zzzzABC"
-"abczzzzzzzzzzzzzzzzzzzzzabc"
-But it does not find matches in the following strings since there are no letter z characters:
-
-""
-"ABC"
-"abcabc"
-Write a greedy regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter C.
-
-
-
-
-
+// Time to pause and test your new regex writing skills. A group of criminals escaped from jail and ran away, but you don't know how many. However, you do know that they stay close together when they are around other people. You are responsible for finding all of the criminals at once.
+//
+// Here's an example to review how to do this:
+//
+// The regex /z+/ matches the letter z when it appears one or more times in a row. It would find matches in all of the following strings:
+//
+// "z"
+// "zzzzzz"
+// "ABCzzzz"
+// "zzzzABC"
+// "abczzzzzzzzzzzzzzzzzzzzzabc"
+// But it does not find matches in the following strings since there are no letter z characters:
+//
+// ""
+// "ABC"
+// "abcabc"
+//
+//Problem: Write a greedy regex that finds one or more criminals within a group of other people. A criminal is represented by the capital letter C.
 
 //Answer: 
 
-let reCriminals = /C+/;
+// let reCriminals = /C+/;
+//
+
+//09July2022
+// Match Beginning String Patterns
+// Prior challenges showed that regular expressions can be used to look for a number of matches. They are also used to search for patterns in specific positions in strings.
+//
+//     In an earlier challenge, you used the caret character (^) inside a character set to create a negated character set in the form [^thingsThatWillNotBeMatched]. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+//
+//     let firstString = "Ricky is first and can be found.";
+// let firstRegex = /^Ricky/;
+// firstRegex.test(firstString);
+// let notFirst = "You can't find Ricky now.";
+// firstRegex.test(notFirst);
+// The first test call would return true, while the second would return false.
+
+    // Use the caret character in a regex to find Cal only in the beginning of the string rickyAndCal.
+    let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/;
+calRegex.test(rickyAndCal);
+console.log(calRegex.test(rickyAndCal));
+
 
 
 
