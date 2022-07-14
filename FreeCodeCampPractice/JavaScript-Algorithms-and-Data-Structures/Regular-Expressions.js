@@ -436,10 +436,26 @@
 //     Use the shorthand character class \W to count the number of non-alphanumeric characters in various quotes and strings.
 
 //Problem:
-let quoteSample = "The five boxing wizards jump quickly.";
-let notAlphabetRegex = /\W/g; // Change this line
-let result = quoteSample.match(notAlphabetRegex).length;
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let notAlphabetRegex = /\W/g; // Change this line
+// let result = quoteSample.match(notAlphabetRegex).length;
+// console.log(result);
+
+//14July2022
+// Match All Numbers
+// You've learned shortcuts for common string patterns like alphanumerics. Another common pattern is looking for just digits or numbers.
+//
+// The shortcut to look for digit characters is \d, with a lowercase d. This is equal to the character class [0-9], which looks for a single character of any number between zero and nine.
+//
+//     Use the shorthand character class \d to count how many digits are in movie titles. Written out numbers ("six" instead of 6) do not count.
+
+    //Problem:
+    let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g;
+let result = movieName.match(numRegex).length;
 console.log(result);
+
+
 
 
 
