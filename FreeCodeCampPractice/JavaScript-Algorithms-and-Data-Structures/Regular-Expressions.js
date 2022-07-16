@@ -449,11 +449,12 @@
 //
 //     Use the shorthand character class \d to count how many digits are in movie titles. Written out numbers ("six" instead of 6) do not count.
 
-    //Problem:
-    //let movieName = "2001: A Space Odyssey";
-//let numRegex = /\d/g;
-//let result = movieName.match(numRegex).length;
-//console.log(result);
+
+//Problem:
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g;
+// let result = movieName.match(numRegex).length;
+// console.log(result);
 
 //15July2022
 //Match All Non-Numbers
@@ -464,9 +465,34 @@
 //Use the shorthand character class for non-digits \D to count how many non-digits are in movie titles.
 
 //Problem:
-let movieName = "2001: A Space Odyssey";
-let noNumRegex = /\D/g; // Change this line
-let result = movieName.match(noNumRegex).length;
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g; // Change this line
+// let result = movieName.match(noNumRegex).length;
+
+//16July2022
+// Restrict Possible Usernames
+// Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+//
+//     You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+//
+//     Usernames can only use alpha-numeric characters.
+//
+//     The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+//
+//     Username letters can be lowercase and uppercase.
+//
+//     Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+//
+//     Change the regex userCheck to fit the constraints listed above.
+
+    //Problem:
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
+let result = userCheck.test(username);
+console.log(result);
+
+
+
 
 
 
