@@ -492,22 +492,44 @@
 // console.log(result);
 
 //17July2022
-Match Whitespace
-The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.
+// Match Whitespace
+// The challenges so far have covered matching letters of the alphabet and numbers. You can also match the whitespace or spaces between letters.
+//
+//     You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class [ \r\t\f\n\v].
+//
+// let whiteSpace = "Whitespace. Whitespace everywhere!"
+// let spaceRegex = /\s/g;
+// whiteSpace.match(spaceRegex);
+// This match call would return [" ", " "].
+//
+//     Change the regex countWhiteSpace to look for multiple whitespace characters in a string.
+    //Problem:
+//     let sample = "Whitespace is important in separating words";
+// let countWhiteSpace = /\s/g; // Change this line
+// let result = sample.match(countWhiteSpace);
+// console.log(result);
 
-    You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class [ \r\t\f\n\v].
+//18July2022
 
-let whiteSpace = "Whitespace. Whitespace everywhere!"
-let spaceRegex = /\s/g;
-whiteSpace.match(spaceRegex);
-This match call would return [" ", " "].
+// Match Non-Whitespace Characters
+// You learned about searching for whitespace using \s, with a lowercase s. You can also search for everything except whitespace.
+//
+//     Search for non-whitespace using \S, which is an uppercase s. This pattern will not match whitespace, carriage return, tab, form feed, and new line characters. You can think of it being similar to the character class [^ \r\t\f\n\v].
+//
+// let whiteSpace = "Whitespace. Whitespace everywhere!"
+// let nonSpaceRegex = /\S/g;
+// whiteSpace.match(nonSpaceRegex).length;
+// The value returned by the .length method would be 32.
+//
+// Change the regex countNonWhiteSpace to look for multiple non-whitespace characters in a string.
 
-    Change the regex countWhiteSpace to look for multiple whitespace characters in a string.
     //Problem:
     let sample = "Whitespace is important in separating words";
-let countWhiteSpace = /\s/g; // Change this line
-let result = sample.match(countWhiteSpace);
+let countNonWhiteSpace = /\S/g;
+let result = sample.match(countNonWhiteSpace);
 console.log(result);
+
+
 
 
 
