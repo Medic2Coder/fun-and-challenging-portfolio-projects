@@ -144,7 +144,7 @@
 // huRegex.test(hugStr);
 // Both of these test calls would return true.
 
-    // Complete the regex unRegex so that it matches the strings run, sun, fun, pun, nun, and bun. Your regex should use the wildcard character.
+// Complete the regex unRegex so that it matches the strings run, sun, fun, pun, nun, and bun. Your regex should use the wildcard character.
 
 //     let exampleStr = "Let's have fun with regular expressions!";
 //     // let unRegex = /[a-z]un/;      //another example
@@ -216,7 +216,7 @@
 // let myRegex = /[a-z0-9]/ig;
 // jennyStr.match(myRegex);
 // Create a single regex that matches a range of letters between h and s, and a range of numbers between 2 and 6. Remember to include the appropriate flags in the regex.
-    //Problem:
+//Problem:
 //     let quoteSample = "Blueberry 3.141592653s are delicious.";
 // let myRegex = /[h-s2-6]/gi; // Change this line
 // let result = quoteSample.match(myRegex); // Change this line
@@ -275,7 +275,7 @@
 //
 //     For this challenge, chewieQuote has been initialized as the string Aaaaaaaaaaaaaaaarrrgh! behind the scenes. Create a regex chewieRegex that uses the * character to match an uppercase A character immediately followed by zero or more lowercase a characters in chewieQuote. Your regex does not need flags or character classes, and it should not match any of the other quotes.
 
-    //Problem:
+//Problem:
 // Only change code below this line
 // let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
 // let chewieRegex = /Aa*/;
@@ -345,7 +345,7 @@
 // firstRegex.test(notFirst);
 // The first test call would return true, while the second would return false.
 
-    // Use the caret character in a regex to find Cal only in the beginning of the string rickyAndCal.
+// Use the caret character in a regex to find Cal only in the beginning of the string rickyAndCal.
 //     let rickyAndCal = "Cal and Ricky both like racing.";
 // let calRegex = /^Cal/;
 // calRegex.test(rickyAndCal);
@@ -414,7 +414,7 @@
 //     Use the shorthand character class \w to count the number of alphanumeric characters in various quotes and strings.
 //
 
-             //Problem:
+//Problem:
 //     let quoteSample = "The five boxing wizards jump quickly.";
 // let alphabetRegexV2 = /\w/g; // Change this line
 // let result = quoteSample.match(alphabetRegexV2).length;
@@ -485,7 +485,7 @@
 //
 //     Change the regex userCheck to fit the constraints listed above.
 
-    //Problem:
+//Problem:
 // let username = "JackOfAllTrades";
 // let userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
 // let result = userCheck.test(username);
@@ -503,7 +503,7 @@
 // This match call would return [" ", " "].
 //
 //     Change the regex countWhiteSpace to look for multiple whitespace characters in a string.
-    //Problem:
+//Problem:
 //     let sample = "Whitespace is important in separating words";
 // let countWhiteSpace = /\s/g; // Change this line
 // let result = sample.match(countWhiteSpace);
@@ -523,7 +523,7 @@
 //
 // Change the regex countNonWhiteSpace to look for multiple non-whitespace characters in a string.
 
-    //Problem:
+//Problem:
 //     let sample = "Whitespace is important in separating words";
 // let countNonWhiteSpace = /\S/g;
 // let result = sample.match(countNonWhiteSpace);
@@ -686,10 +686,33 @@ Change the regex favRegex to match both the American English (favorite) and the 
 // Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits.
 
 //Problem:
-let sampleWord = "astronaut";
-let pwRegex = /^(?=\w{6})(?=\w*\d{2})/;
-let result = pwRegex.test(sampleWord);
+// let sampleWord = "astronaut";
+// let pwRegex = /^(?=\w{6})(?=\w*\d{2})/;
+// let result = pwRegex.test(sampleWord);
+// console.log(result);
+
+//25July2022
+// Check For Mixed Grouping of Characters
+// Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses ().
+//
+//     If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+//
+// Then check whether the desired string groups are in the test string by using the test() method.
+//
+//     let testStr = "Pumpkin";
+// let testRegex = /P(engu|umpk)in/;
+// testRegex.test(testStr);
+// The test method here would return true.
+//
+//     Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names.
+//
+//     Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+//Problem:
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor).*Roosevelt/; // Change this line
+let result = myRegex.test(myString); // Change this line
 console.log(result);
+
 
 
 
