@@ -758,11 +758,27 @@ Change the regex favRegex to match both the American English (favorite) and the 
 
 
     //Problem:
-let str = "one two three";
-let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
-let replaceText = "$3 $2 $1"; // Change this line
-let result = str.replace(fixRegex, replaceText);
-console.log(result);
+//let str = "one two three";
+//let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+//let replaceText = "$3 $2 $1"; // Change this line
+//let result = str.replace(fixRegex, replaceText);
+//console.log(result);
+
+//28July2022
+/*Remove Whitespace from Start and End
+
+Sometimes whitespace characters around strings are not wanted but are there. Typical processing of strings is to remove the whitespace at the start and end of it.
+
+Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+
+Note: The String.prototype.trim() method would work here, but you'll need to complete this challenge using regular expressions.
+*/
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g/;
+let result = hello; // Change this line
+
+//last regex problem!
 
 
 
